@@ -1,5 +1,15 @@
-<ul>
+<div class="list-group">
   {{#each model as |message|}}
-    <li>{{message.subject}}</li>
+    <div class="list-group-item">
+      {{#message-container message=message as |state actions|}}
+        {{message-display
+          message=state.message
+          isChecked=state.isChecked
+          isFavorited=state.isFavorited
+          handleCheck=(action actions.toggleCheck)
+          handleFavorite=(action actions.toggleFavorite)
+        }}
+      {{/message-container}}
+    </div>
   {{/each}}
-</ul>
+</div>

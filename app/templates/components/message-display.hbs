@@ -1,0 +1,4 @@
+{{one-way-checkbox checked=isChecked update=(action handleCheck)}}
+{{fa-icon (if isFavorited 'star fa-lg' 'star-o fa-lg') click=(action handleFavorite)}}
+<strong>{{message.senderName}}</strong>
+{{message.subject}}

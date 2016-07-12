@@ -1,0 +1,11 @@
+{{yield
+    (hash
+      message=message
+      isChecked=isChecked
+      isFavorited=isFavorited
+    )
+    (hash
+      toggleCheck=(action 'toggleCheck')
+      toggleFavorite=(action 'toggleFavorite')
+    )
+}}
